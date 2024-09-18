@@ -2,8 +2,8 @@ import clientPromise from "@/app/lib/mongo";
 
 export async function GET(req) {
   try {
-    const client = await clientPromise;  // Get MongoDB client
     const db = client.db('TESTDB');  // Connect to the database
+    const client = await clientPromise;  // Get MongoDB client
 
     // Query the neighborhoods collection and get all restaurants
     const neighborhoods = await db.collection('TESTMONGODB').find({}).toArray();
