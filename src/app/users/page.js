@@ -10,28 +10,28 @@
 //     )
 // }
 
-"use client"
-import React from 'react'
-import { useEffect } from 'react'
-import { useState } from 'react/cjs/react.production.min'
+// "use client"
+// import React from 'react'
+// import { useEffect } from 'react'
+// import { useState } from 'react/cjs/react.production.min'
 
-const UserPage = () => {
-    const [data, setData] = useState([])
-    useEffect(() => {
-        async function getData() {
-            const response = await fetch(`${process.env.APP_BASE_URL}/api/test`);
-            const responseData = await response.json() || [];
-            setData(responseData || [])
-        }
-        getData()
-    }, [])
-    return (
-        <div>
-            <div>
-                {data?.map((curr, idx) => <h1 key={idx}> UserName: <span style={{ textTransform: "uppercase" }}>{curr?.name}</span> </h1>)}
-            </div>
-        </div>
-    )
-}
+// const UserPage = () => {
+//     const [data, setData] = useState([])
+//     useEffect(() => {
+//         async function getData() {
+//             const response = await fetch(`${process.env.APP_BASE_URL}/api/test`);
+//             const responseData = await response.json() || [];
+//             setData(responseData || [])
+//         }
+//         getData()
+//     }, [])
+//     return (
+//         <div>
+//             <div>
+//                 {data?.map((curr, idx) => <h1 key={idx}> UserName: <span style={{ textTransform: "uppercase" }}>{curr?.name}</span> </h1>)}
+//             </div>
+//         </div>
+//     )
+// }
 
-export default UserPage
+// export default UserPage
